@@ -32,7 +32,7 @@ object NetworkModule {
     @Singleton
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder()
-            .baseUrl("https://jsonplaceholder.typicode.com/")
+            .baseUrl("https://jsonplaceholder.typicode.com/") // Add you server url where you want to store your todo task
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
